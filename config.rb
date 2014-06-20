@@ -20,7 +20,6 @@ set :haml, {
 ###
 
 page "-i.html", :layout => false
-# page "articles.html", :layout => :plain
 # page "/path/to/file.html", :layout => :otherlayout
 
 # A path which all have the same layout
@@ -51,9 +50,9 @@ set :js_dir, 'assets/javascripts'
 set :css_dir, 'assets/stylesheets'
 set :fonts_dir, 'assets/fonts'
 set :images_dir, 'assets/images'
-set :partials_dir, 'shared'
+# set :partials_dir, 'shared'
 
-activate :livereload
+# activate :livereload
 activate :autoprefixer
 # activate :directory_indexes
 
