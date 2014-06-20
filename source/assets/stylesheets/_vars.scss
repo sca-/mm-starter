@@ -12,8 +12,8 @@ $gutter: 25px;
 }
 
 
-$icons: sprite-map("sprite/*.png", $spacing: 10px);
-// $icons_r: sprite-map("icons_r/*.png", $spacing: 10px);
+$icons: sprite-map("icons/*.png", $spacing: 10px);
+// $icons_r: sprite-map("iconsr/*.png", $spacing: 10px);
 $duration: 0.5s;
 
 // sized sprites
@@ -21,31 +21,18 @@ $duration: 0.5s;
   width: image-width($path);
   height: image-height($path);
 }
-//for retina
-// @mixin image-sizer($path){
-//   width: image-width($path)/2;
-//   height: image-height($path)/2;
-// }
 
 @mixin sized-sprite($map, $sprite){
   background: sprite($map, $sprite) no-repeat;
   @include image-size(sprite-file($map, $sprite));
 }
-//for retina
-// @mixin sized-spriter($map, $sprite){
-//   background: sprite($map, $sprite) no-repeat;
-//   $ypos: round(nth(sprite-position($map, $sprite), 2) / 2);
-//   background-position: 0 $ypos;
-//   @include image-sizer(sprite-file($map, $sprite));
-//   @include background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2));
-// }
 
 @mixin bgs($sprite) {
   background: sprite($icons, $sprite) no-repeat;
   // @media (-webkit-min-device-pixel-ratio: 2), (min-resoultion: 192dpi) {
   //   background: sprite($icons_r, $sprite) no-repeat;
   //   $ypos: round(nth(sprite-position($icons_r, $sprite), 2) / 2);
-  //     background-position: 0 $ypos; 
+  //     background-position: 0 $ypos;
   //     @include background-size(ceil(image-width(sprite-path($icons_r)) / 2), ceil(image-height(sprite-path($icons_r)) / 2));
   // }
 }
@@ -54,7 +41,7 @@ $duration: 0.5s;
   // @media (-webkit-min-device-pixel-ratio: 2), (min-resoultion: 192dpi) {
   //   background: sprite($icons_r, $sprite) no-repeat;
   //   $ypos: round(nth(sprite-position($icons_r, $sprite), 2) / 2);
-  //     background-position: 0 $ypos; 
+  //     background-position: 0 $ypos;
   //     @include background-size(ceil(image-width(sprite-path($icons_r)) / 2), ceil(image-height(sprite-path($icons_r)) / 2));
   // }
 }
@@ -79,9 +66,9 @@ $break-3: 1024px;
   }
 }
 @mixin retina() {
-  @media 
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) { 
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
       /* Retina-specific stuff here */
   }
 }
@@ -91,7 +78,7 @@ $break-3: 1024px;
     &:-moz-placeholder { @content; }
     &::-moz-placeholder { @content; }
     &:-ms-input-placeholder { @content; }
-    &::-webkit-input-placeholder { @content; } 
+    &::-webkit-input-placeholder { @content; }
 }
 
 @mixin animation($prop: opacity, $t1: .3s, $t2: .1s) {
