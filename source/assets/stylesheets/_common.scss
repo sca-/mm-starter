@@ -1,4 +1,8 @@
-body {
-  font: 14px $fontMain;
-  background: #fff;
+.wrapper{
+	width: 100%;
+	background: image_url("bg.jpg");
+	background-size: cover;
+}
+.screen{
+	height: 300px;
 }
