@@ -10,7 +10,7 @@ Middleman Stater
 	rm -r .default
 
 	# устанавливаем наш шаблон по умолчанию
-	git clone git@bitbucket.org:hse_carpenters/middleman-starter.git default
+	git clone git@github.com:sca-/mm-starter.git default
 
 Использование
 ---
